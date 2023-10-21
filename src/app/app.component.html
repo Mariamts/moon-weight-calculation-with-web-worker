@@ -1,0 +1,13 @@
+<div class="moon-gravity-calculator">
+  <h2>Moon Gravity Weight Calculator</h2>
+  <form (ngSubmit)="calculateMoonWeight()">
+    <input
+      type="text"
+      [(ngModel)]="userWeight"
+      placeholder="Enter your weight on Earth (in kg)"
+      name="userWeight"
+    >
+    <button type="submit">Calculate</button>
+  </form>
+  <p *ngIf="moonWeight">Your weight on the Moon is {{ moonWeight | number: '1.2-2' }} kg.</p>
+</div>
